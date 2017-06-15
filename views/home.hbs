@@ -40,6 +40,13 @@
            c.innerHTML = "City of " + response.data.name;
          });
       }
+      var x = document.getElementById('textfield');
+      x.addEventListener('keydown', function(event){
+        var char = event.which || event.keyCode;
+        if (char == '13' {
+          changeZip(x.form)
+        });
+      });
     </script>
   </body>
 </html>
