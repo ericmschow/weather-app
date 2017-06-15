@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var apicache = require('apicache');
 var cache = apicache.middleware;
+var pgp = require('pg-promise')();
+var db = pgp(process.env.DATABASE_URL || {database: 'test'}); // this is the important line
+
 
 var axios = require('axios');
 
